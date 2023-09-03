@@ -1,6 +1,7 @@
 import { Camera, CameraType } from 'expo-camera';
 import { useRef, useState } from 'react';
 import { Button, Text, TouchableOpacity, View } from 'react-native';
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 export default function Snap() {
   const camera = useRef<Camera>(null);
@@ -31,13 +32,11 @@ export default function Snap() {
       <Camera style={{ flex: 1 }} type={type}>
         <View className='flex flex-row items-center mt-auto p-8'>
           <TouchableOpacity className='mr-auto' onPress={toggleCameraType}>
-            <Text>Flip Camera</Text>
+            <Ionicons name="camera-reverse" size={32} color="white" />
           </TouchableOpacity>
-          <TouchableOpacity className='relative bg-white/60 p-8 rounded-full'>
-            <View className='p-2 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
-              <View className='bg-white/60 p-6 rounded-full'></View>
-            </View>
-          </TouchableOpacity>
+          <View className='border-4 border-white rounded-full'>
+            <TouchableOpacity className='relative bg-white p-7 m-1 rounded-full'></TouchableOpacity>
+          </View>
         </View>
       </Camera>
     </View>
