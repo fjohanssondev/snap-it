@@ -9,14 +9,14 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#fff"
     },
-    "scheme": "your-app-scheme",
+    "scheme": "snapit",
     "compilerOptions": {
       "baseUrl": ".",
       "paths": {
-        "@/*": [
-          "src/*"
+        "@/components": [
+          "components"
         ]
       }
     },
@@ -26,25 +26,6 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "ios": {
-      "supportsTablet": true,
-      "infoPlist": {
-        "NSCameraUsageDescription": "Snapit needs access to your Camera.",
-        "NSMicrophoneUsageDescription": "Snapit needs access to your Microphone."
-      },
-      "bundleIdentifier": "com.anonymous.snapit"
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "permissions": [
-        "android.permission.CAMERA",
-        "android.permission.RECORD_AUDIO"
-      ],
-      "package": "com.anonymous.snapit"
-    },
     "web": {
       "favicon": "./assets/favicon.png"
     },
@@ -60,10 +41,10 @@
     "extra": {
       "router": {
         "origin": false
-      },
-      "eas": {
-        "projectId": "3ff03b33-45eb-4577-ab24-b5fbc9a68884"
       }
+    },
+    "ios": {
+      "bundleIdentifier": "com.fjohansson.snapit"
     }
   }
 }
